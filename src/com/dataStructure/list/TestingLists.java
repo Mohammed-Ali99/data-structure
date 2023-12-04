@@ -6,6 +6,27 @@ public class TestingLists {
 
     public static void main(String[] args) {
         /*
+        Queue<Integer> queue = new Queue<Integer>();
+        queue.enqueue(10);
+        queue.print();
+        queue.enqueue(50);
+        queue.print();
+        queue.enqueue(25);
+        queue.print();
+        queue.enqueue(65);
+        queue.print();
+        queue.enqueue(88);
+        queue.print();
+
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        */
+
+        /*
         CompositionStack<String> stack = new CompositionStack<String>();
         stack.push("mohamed");
         stack.print();

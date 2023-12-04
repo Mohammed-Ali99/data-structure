@@ -1,8 +1,23 @@
 package com.dataStructure.list;
 
+import java.lang.annotation.Target;
+
 public class TestingLists {
 
     public static void main(String[] args) {
+        /*
+        CompositionStack<String> stack = new CompositionStack<String>();
+        stack.push("mohamed");
+        stack.print();
+        stack.push("ahmed");
+        stack.print();
+        stack.push("syaed");
+        stack.print();
+        stack.push("ali");
+        stack.print();
+        stack.push("abdo");
+        stack.print();
+        */
 
         /*
         StackInheritance<Integer> stack = new StackInheritance<Integer>();

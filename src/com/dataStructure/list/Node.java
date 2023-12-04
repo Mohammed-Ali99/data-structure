@@ -1,12 +1,11 @@
-package com.dataStructure.linkedlist;
+package com.dataStructure.list;
 
 class Node<T> {
-
     T data;
     Node<T> nextNode;
 
-    Node(T object) {
-        this(object , null);
+    Node (T object) {
+        this(object, null);
     }
 
     Node(T object , Node<T> node) {
@@ -18,7 +17,7 @@ class Node<T> {
         return data;
     }
 
-    public Node getNextNode() {
+    public Node<T> getNextNode() {
         return nextNode;
     }
 

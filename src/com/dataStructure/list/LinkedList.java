@@ -1,19 +1,18 @@
-package com.dataStructure.linkedlist;
+package com.dataStructure.list;
 
 public class LinkedList<T> {
-
-    private Node<T> firstNode;
-    private Node<T> lastNode;
-    private String name;
+    Node<T> firstNode;
+    Node<T> lastNode;
+    String name;
 
     public LinkedList() {
-        this("list");
+        this("linkedList");
+    }
+    public LinkedList(String nameList) {
+        firstNode = lastNode = null;
+        name = nameList;
     }
 
-    public LinkedList(String listName) {
-        name = listName;
-        firstNode = lastNode = null;
-    }
 
     public void insertAtFront(T insertItem) {
         if(isEmpty()) {
@@ -32,25 +31,26 @@ public class LinkedList<T> {
     }
 
     public T removeAtFront() {
-        if(isEmpty()) {
-            throw new EmptyListException(name);
+        if (isEmpty()) {
+            throw new EmptyListException();
         }
-        T removeItem = firstNode.data;
 
+        T removedItem = firstNode.data;
         if(firstNode == lastNode) {
             firstNode = lastNode = null;
         } else {
             firstNode = firstNode.nextNode;
         }
-        return removeItem;
+
+        return removedItem;
     }
 
     public T removeFromBack() {
         if(isEmpty()) {
-            throw new EmptyListException(name);
+            throw new EmptyListException();
         }
-        T removeItem = lastNode.data;
 
+        T removedItem = lastNode.data;
         if(firstNode == lastNode) {
             firstNode = lastNode = null;
         } else {
@@ -61,26 +61,28 @@ public class LinkedList<T> {
             lastNode = current;
             current.nextNode = null;
         }
-        return removeItem;
+        return removedItem;
     }
 
     public boolean isEmpty() {
         return firstNode == null;
     }
 
-
     public void print() {
         if(isEmpty()) {
-            System.out.printf("Empty %s%n" , name);
-        } else {
-            System.out.printf("The %s is: " , name);
-            Node<T> current = firstNode;
-            while (current != null) {
-                System.out.printf("%s " , current.getData());
-                current = current.nextNode;
-            }
-            System.out.println();
+            System.out.printf("Empty %s%n", name);
+            return;
         }
+
+        System.out.printf("The %s is: " , name);
+
+        Node<T> current = firstNode;
+        while (current != null) {
+            System.out.printf("%s " , current.data);
+            current = current.nextNode;
+        }
+        System.out.println();
+
     }
 
 }
